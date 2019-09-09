@@ -76,6 +76,7 @@ namespace BlazingPizza.Server
 
             _db.Orders.Attach(order);
             await _db.SaveChangesAsync();
+            await Task.Delay(5000); // Wait 5 seconds
             return order.OrderId;
         }
 
